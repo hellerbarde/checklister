@@ -49,7 +49,24 @@ body {
 
         <style type="text/css" media="print">
 
-#checklist-navbar {
+#checklist-navbar, #github-ribbon {
+    display: none;
+}
+#checklister-notice {
+    display: block;
+    text-align: center;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(99,99,99) !important;
+    font-style: italic;
+    font-size: 70%;
+}
+        </style>
+
+        <style type="text/css" media="screen">
+
+#checklister-notice {
     display: none;
 }
 
@@ -113,6 +130,8 @@ $(function () {
         </script>
     </head>
     <body>
+        
+        <a href="https://github.com/hellerbarde/checklister" id="github-ribbon" ><img style="z-index:2000;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
         <div id="checklist-navbar" class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -121,7 +140,7 @@ $(function () {
 
                         <button class="btn" id="action-add-item">Add Item</button>
                         <button class="btn" id="action-print">Print</button>
-                        <button class="btn btn-danger" id="action-remove-last-item">Remove Last Item</button>
+                        <button class="btn btn-danger" id="action-remove-last-item">Remove Last</button>
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
@@ -130,9 +149,10 @@ $(function () {
             <h2 contenteditable="true">Checklist</h2>
             <div id="checklist">
                 <ul>
-                    <!-- <li><span class="checklist-item" contenteditable="true"></br></span></li> -->
+                    <!-- checklist items go here -->
                 </ul>
             </div>
         </div>
+        <small id="checklister-notice">generated with http://hellerbarde.github.com/checklister/</small>
     </body>
 </html>
